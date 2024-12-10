@@ -29,7 +29,7 @@
 ```
 
 
-роль `Clickhouse` установится на любое семейство OS
+роль `Clickhouse` установится на любое семейство OS  
 роли `Vector` и `Lighthouse` установятся на семейство OS `debian`  
 
 
@@ -40,8 +40,8 @@
 |:---|:---|
 | `vector_version` | версия `Vector` |
 
-подробное описание перпеменных для Clickhouse  
-https://github.com/AlexeySetevoi/ansible-clickhouse/blob/master/README.md
+подробное описание перпеменных для Clickhouse    
+https://github.com/AlexeySetevoi/ansible-clickhouse/blob/master/README.md  
 
 
 Playbook
