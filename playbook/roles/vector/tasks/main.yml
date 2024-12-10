@@ -1,0 +1,20 @@
+---
+# tasks file for ansible-vector
+- name: Download vector distribution
+  ansible.builtin.get_url:
+    url: "https://apt.vector.dev/pool/v/ve/vector_{{ vector_version }}_amd64.deb"
+    dest: "./vector-{{ vector_version }}.deb"
+
+- name: Install vector packages
+  become: true
+  ansible.builtin.apt:
+    state: present
+    deb: vector-{{ vector_version }}.deb
+
+- name: Deploy vector configuration
+  ansible.builtin.template:
+    src: vector.j2
+    dest: /etc/vector/vector.yaml
+    mode: "0644"
+    validate: /etc/vector/bin/vector validate --no-environment --config-yaml %s
+  notify: Restart vector service

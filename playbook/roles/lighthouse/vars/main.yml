@@ -1,0 +1,4 @@
+---
+# vars file for ansible-lighthouse
+    lighthouse_url: "https://github.com/VKCOM/lighthouse/archive/refs/heads/master.zip"
+    lighthouse_dir: "/var/www/lighthouse"
